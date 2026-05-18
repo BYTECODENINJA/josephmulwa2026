@@ -11,8 +11,10 @@ import Hero from "./components/Hero";
 import About from "./components/About";
 import Skills from "./components/Skills";
 import Experience from "./components/Experience";
+import TechJourney from "./components/TechJourney";
 import Interests from "./components/Interests";
 import Projects from "./components/Projects";
+import Contact from "./components/Contact";
 import HireMeModal from "./components/HireMeModal";
 import Footer from "./components/Footer";
 
@@ -54,8 +56,10 @@ function App() {
             <About />
             <Skills />
             <Experience />
+            <TechJourney />
             <Interests />
             <Projects />
+            <Contact />
             <Footer />
           </div>
 

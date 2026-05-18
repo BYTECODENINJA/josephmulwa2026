@@ -20,12 +20,9 @@ const skillCategories = [
         icon: Code2,
         accent: "#ff0033",
         skills: [
-            { name: "JavaScript", level: 95 },
-            { name: "TypeScript", level: 90 },
-            { name: "React", level: 92 },
-            { name: "Node.js", level: 88 },
-            { name: "Express", level: 85 },
-            { name: "Python", level: 78 },
+            { name: "React.js", level: 92 },
+            { name: "Express.js", level: 85 },
+            { name: "GSAP", level: 78 },
         ],
     },
     {
@@ -33,9 +30,9 @@ const skillCategories = [
         icon: Database,
         accent: "#00f0ff",
         skills: [
-            { name: "PostgreSQL", level: 85 },
-            { name: "MySQL", level: 82 },
             { name: "MongoDB", level: 80 },
+            { name: "MySQL", level: 82 },
+            { name: "PostgreSQL", level: 85 },
         ],
     },
     {
@@ -44,9 +41,8 @@ const skillCategories = [
         accent: "#ff00ff",
         skills: [
             { name: "Docker", level: 70 },
-            { name: "Kubernetes", level: 55 },
             { name: "Git", level: 90 },
-            { name: "GitHub Actions", level: 75 },
+            { name: "GitHub", level: 88 },
         ],
     },
 ];

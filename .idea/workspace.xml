@@ -5,24 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a4faded2-a7aa-4b50-856d-a415130846b5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/ui/toast.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ui/toaster.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/NotFound.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Expirience.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Experience.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Projects.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Projects.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SKills.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Skills.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/tooltip.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/tooltip.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/utils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/utils.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vite.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/vite.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Skills.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Skills.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,7 +118,7 @@
       <option name="presentableId" value="Default" />
       <updated>1779118895040</updated>
       <workItem from="1779118896224" duration="4054000" />
-      <workItem from="1779125060088" duration="4713000" />
+      <workItem from="1779125060088" duration="6145000" />
     </task>
     <servers />
   </component>

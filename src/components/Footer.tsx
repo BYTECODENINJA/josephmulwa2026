@@ -21,7 +21,10 @@ const quickLinks = [
     { label: "About", href: "#about" },
     { label: "Skills", href: "#skills" },
     { label: "Experience", href: "#experience" },
+    { label: "Tech Journey", href: "#tech-journey" },
+    { label: "Interests", href: "#interests" },
     { label: "Projects", href: "#projects" },
+    { label: "Contacts", href: "#contact" },
     { label: "Hire Me", action: () => window.dispatchEvent(new CustomEvent("open-hire-modal")) },
 ];
 
