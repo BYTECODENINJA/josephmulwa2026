@@ -116,7 +116,7 @@ export default function Interests() {
                 ))}
             </div>
 
-            <div className="relative z-10 max-w-5xl mx-auto">
+            <div className="relative z-10 max-w-7xl mx-auto">
                 <div className="bento-reveal mb-6">
           <span className="text-[11px] font-medium tracking-[0.2em] text-[#ff00ff] uppercase">
             Interests

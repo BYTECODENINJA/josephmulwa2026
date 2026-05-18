@@ -44,18 +44,18 @@ export default function About() {
             id="about"
             className="relative min-h-[80vh] flex items-center py-32 px-6"
         >
-            <div className="relative z-10 max-w-4xl mx-auto w-full">
+            <div className="relative z-10 max-w-7xl mx-auto w-full">
                 <div className="about-reveal mb-6">
           <span className="text-[11px] font-medium tracking-[0.2em] text-[#ff0033] uppercase">
             About
           </span>
                 </div>
 
-                <h2 className="about-reveal font-display text-3xl sm:text-4xl md:text-5xl text-white mb-12 tracking-tight leading-tight max-w-2xl">
+                <h2 className="about-reveal font-display text-3xl sm:text-4xl md:text-5xl text-white mb-12 tracking-tight leading-tight max-w-3xl">
                     Bridging clean code with reliable DevOps pipelines.
                 </h2>
 
-                <div className="grid lg:grid-cols-2 gap-16 items-start">
+                <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-16 xl:gap-24 items-start">
                     <div className="space-y-6">
                         <p className="about-reveal font-body text-[17px] text-[#86868b] leading-relaxed">
                             I&apos;m{" "}

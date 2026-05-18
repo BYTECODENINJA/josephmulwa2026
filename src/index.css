@@ -159,6 +159,16 @@
     0%, 100% { opacity: 0.6; }
     50% { opacity: 1; }
   }
+  .tech-ribbon {
+    animation: techRibbon 28s linear infinite;
+  }
+  .tech-ribbon:hover {
+    animation-play-state: paused;
+  }
+  @keyframes techRibbon {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
 }
 
 /* Scrollbar */

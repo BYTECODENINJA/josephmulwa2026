@@ -60,7 +60,7 @@ export default function Footer() {
 
     return (
         <footer className="relative border-t border-white/[0.04]">
-            <div className="relative z-10 max-w-5xl mx-auto px-6 py-20">
+            <div className="relative z-10 max-w-7xl mx-auto px-6 py-20">
                 <div className="grid md:grid-cols-3 gap-12 mb-16">
                     {/* Brand */}
                     <div className="space-y-5">

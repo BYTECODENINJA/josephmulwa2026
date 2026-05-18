@@ -5,11 +5,9 @@ import {
     Code2,
     Database,
     Server,
-    Layers,
     GitBranch,
     Container,
-    Cloud,
-    Shield,
+    Sparkles,
 } from "lucide-react";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -48,12 +46,15 @@ const skillCategories = [
 ];
 
 const techStack = [
-    { icon: Layers, label: "Frontend" },
-    { icon: Server, label: "Backend" },
-    { icon: GitBranch, label: "Version Control" },
-    { icon: Container, label: "Containerization" },
-    { icon: Cloud, label: "Cloud" },
-    { icon: Shield, label: "Security" },
+    { icon: Code2, label: "React.js", color: "#00f0ff" },
+    { icon: Server, label: "Express.js", color: "#ff0033" },
+    { icon: Database, label: "MongoDB", color: "#00f0ff" },
+    { icon: Database, label: "MySQL", color: "#ff00ff" },
+    { icon: Database, label: "PostgreSQL", color: "#00f0ff" },
+    { icon: Container, label: "Docker", color: "#ff0033" },
+    { icon: GitBranch, label: "Git", color: "#ff00ff" },
+    { icon: GitBranch, label: "GitHub", color: "#00f0ff" },
+    { icon: Sparkles, label: "GSAP", color: "#ff0033" },
 ];
 
 export default function Skills() {
@@ -88,7 +89,7 @@ export default function Skills() {
             id="skills"
             className="relative py-32 px-6"
         >
-            <div className="relative z-10 max-w-5xl mx-auto">
+            <div className="relative z-10 max-w-7xl mx-auto">
                 <div className="skill-reveal mb-6">
           <span className="text-[11px] font-medium tracking-[0.2em] text-[#00f0ff] uppercase">
             Skills
@@ -147,18 +148,22 @@ export default function Skills() {
                     ))}
                 </div>
 
-                <div className="skill-reveal flex flex-wrap items-center justify-center gap-3">
-                    {techStack.map((tech) => (
-                        <div
-                            key={tech.label}
-                            className="flex items-center gap-2 px-4 py-2 rounded-full border border-white/[0.06] bg-white/[0.02] hover:bg-white/[0.04] hover:border-white/[0.1] transition-all duration-300"
-                        >
-                            <tech.icon className="w-3.5 h-3.5 text-[#86868b]" />
-                            <span className="text-[11px] font-medium tracking-wider text-[#86868b] uppercase">
-                {tech.label}
-              </span>
-                        </div>
-                    ))}
+                <div className="skill-reveal relative overflow-hidden rounded-2xl border border-white/[0.06] bg-white/[0.02] py-4">
+                    <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-24 bg-gradient-to-r from-black to-transparent" />
+                    <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-24 bg-gradient-to-l from-black to-transparent" />
+                    <div className="tech-ribbon flex w-max items-center gap-3">
+                        {[...techStack, ...techStack].map((tech, index) => (
+                            <div
+                                key={`${tech.label}-${index}`}
+                                className="flex shrink-0 items-center gap-2 rounded-full border border-white/[0.06] bg-black/30 px-5 py-2.5"
+                            >
+                                <tech.icon className="w-3.5 h-3.5" style={{ color: tech.color }} />
+                                <span className="text-[11px] font-medium tracking-wider text-[#86868b] uppercase">
+                                    {tech.label}
+                                </span>
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </div>
         </section>

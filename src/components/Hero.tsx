@@ -71,7 +71,7 @@ export default function Hero() {
         >
             <div className="absolute inset-0 gradient-mesh" />
 
-            <div className="relative z-10 text-center max-w-4xl mx-auto">
+            <div className="relative z-10 text-center max-w-6xl mx-auto">
                 {/* Status badge */}
                 <div
                     ref={badgeRef}
@@ -108,7 +108,7 @@ export default function Hero() {
                 {/* Subtitle with subtle morph */}
                 <p
                     ref={subtitleRef}
-                    className="font-body text-lg sm:text-xl md:text-2xl text-[#86868b] max-w-xl mx-auto mb-4 leading-relaxed tracking-tight opacity-0"
+                    className="font-body text-lg sm:text-xl md:text-2xl text-[#86868b] max-w-2xl mx-auto mb-4 leading-relaxed tracking-tight opacity-0"
                     style={{ perspective: "800px" }}
                 >
                     {subtitleChars.map((char, i) => (

@@ -39,7 +39,7 @@ export default function Contact() {
 
     return (
         <section ref={sectionRef} id="contact" className="relative py-32 px-6">
-            <div className="relative z-10 max-w-5xl mx-auto">
+            <div className="relative z-10 max-w-7xl mx-auto">
                 <div className="contact-reveal mb-6">
                     <span className="text-[11px] font-medium tracking-[0.2em] text-[#ff0033] uppercase">
                         Contacts
