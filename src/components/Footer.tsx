@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import {
-    Github,
-    Twitter,
-    Linkedin,
+    X,
+    GitBranch,
+    Link,
     Mail,
     Activity,
     ArrowUp,
@@ -11,9 +11,9 @@ import {
 } from "lucide-react";
 
 const socialLinks = [
-    { icon: Github, label: "GitHub", href: "#" },
-    { icon: Twitter, label: "Twitter", href: "#" },
-    { icon: Linkedin, label: "LinkedIn", href: "#" },
+    { icon: GitBranch, label: "GitHub", href: "#" },
+    { icon: X, label: "Twitter", href: "#" },
+    { icon: Link, label: "LinkedIn", href: "#" },
     { icon: Mail, label: "Email", href: "mailto:joseph@example.com" },
 ];
 

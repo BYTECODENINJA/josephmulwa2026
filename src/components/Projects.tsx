@@ -1,7 +1,7 @@
 import { useRef, useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { ExternalLink, Github, ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, GitBranch } from "lucide-react";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -148,7 +148,7 @@ export default function Projects() {
 
                                     <div className="flex items-center gap-3 pt-3 border-t border-white/[0.04]">
                                         <button className="flex items-center gap-1.5 text-[#6e6e73] hover:text-white transition-colors text-[11px] font-medium tracking-wider uppercase">
-                                            <Github className="w-3.5 h-3.5" />
+                                            <GitBranch className="w-3.5 h-3.5" />
                                             Source
                                         </button>
                                         <button className="flex items-center gap-1.5 text-[#6e6e73] hover:text-white transition-colors text-[11px] font-medium tracking-wider uppercase ml-auto group/btn">
