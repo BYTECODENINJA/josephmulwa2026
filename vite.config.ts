@@ -1,5 +1,5 @@
 import path from "path"
-import react from "@vitejs/react-plugin"
+import react from "@vitejs/plugin-react"
 import { defineConfig } from "vite"
 
 // https://vitejs.dev
