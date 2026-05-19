@@ -11,10 +11,10 @@ import {
 } from "lucide-react";
 
 const socialLinks = [
-    { icon: GitBranch, label: "GitHub", href: "#" },
+    { icon: GitBranch, label: "GitHub", href: "https://github.com/BYTECODENINJA" },
     { icon: X, label: "Twitter", href: "#" },
-    { icon: Link, label: "LinkedIn", href: "#" },
-    { icon: Mail, label: "Email", href: "mailto:joseph@example.com" },
+    { icon: Link, label: "LinkedIn", href: "https://linkedin.com/in/joseph-mulwa808" },
+    { icon: Mail, label: "Email", href: "josephmulwa8055@gmail.com
 ];
 
 const quickLinks = [
