@@ -5,48 +5,70 @@ import { ArrowUpRight, GitBranch } from "lucide-react";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const projects = [
+type Project = {
+    title: string;
+    description: string;
+    tags: string[];
+    color: string;
+    image: string;
+    sourceUrl: string;
+    liveUrl: string;
+};
+
+const projects: Project[] = [
     {
-        id: "01",
         title: "AI powered Resume Creator.",
         description: "ResumeFlow is a modern, high-performance resume builder designed to help you create professional, ATS-friendly resumes with ease. Built with React, TypeScript, and Vite, it offers a seamless and interactive user experience.",
         tags: ["React", "Vite", "Typescript", "Supabase"],
         color: "#ff0033",
+        image: "/src/assets/ResumeCreator.png",
+        sourceUrl: "https://github.com/",
+        liveUrl: "https://example.com/",
     },
     {
-        id: "02",
-        title: "Task Orchestrator",
-        description: "Kanban-style project management tool with drag-and-drop, real-time sync, and team workspaces.",
+        title: "Expense Tracker",
+        description: "MoneyMate is a full-stack personal finance management application that lets you track income and expenses, visualise spending trends, scan receipts with AI, and receive scheduled financial reports — all in one place. Built for Kenya with a clean modern UI.",
         tags: ["TypeScript", "Next.js", "PostgreSQL", "WebSockets"],
         color: "#00f0ff",
+        image: "/src/assets/financetracker.png",
+        sourceUrl: "https://github.com/",
+        liveUrl: "https://example.com/",
     },
     {
-        id: "03",
-        title: "DevOps Monitor",
-        description: "Container monitoring dashboard with Docker metrics, log aggregation, and alerting rules.",
+        title: "Rentals Seeking Website",
+        description: "A rentals searching website hosted for kenyan property owners and property seekers to make property finding much easier",
         tags: ["React", "Docker", "Grafana", "Prometheus"],
         color: "#ff00ff",
+        image: "/src/assets/Rentosearch.png",
+        sourceUrl: "https://github.com/",
+        liveUrl: "https://example.com/",
     },
     {
-        id: "04",
-        title: "Chatbot Engine",
-        description: "AI-powered conversational interface with NLP pipeline, context memory, and multi-turn dialogue.",
+        title: "Windows Style Portfolio",
+        description: "A Windows UI-style portfolio website for a fullstack developer. Features a dynamic resume section, blog section, contact form, and more — all in a Windows-inspired design.",
         tags: ["Python", "FastAPI", "OpenAI", "Redis"],
         color: "#ff0033",
+        image: "/src/assets/Windowsportfolio.png",
+        sourceUrl: "https://github.com/",
+        liveUrl: "https://example.com/",
     },
     {
-        id: "05",
-        title: "Portfolio CMS",
-        description: "Headless content management system for creative portfolios with dynamic page builder.",
+        title: "Gaming Landing Page",
+        description: "A fully animated landing page for a gaming website with a clean and modern design. Features a dynamic navbar, smooth scroll animation, parallax effect, and fully responsive layout.",
         tags: ["Next.js", "Sanity", "Tailwind", "Vercel"],
         color: "#00f0ff",
+        image: "/src/assets/Gamingwebsite.png",
+        sourceUrl: "https://github.com/",
+        liveUrl: "https://example.com/",
     },
     {
-        id: "06",
         title: "API Gateway",
         description: "Microservices API gateway with rate limiting, JWT auth, and request/response transformation.",
         tags: ["Node.js", "Express", "JWT", "Redis"],
         color: "#ff00ff",
+        image: "/projects/api-gateway.png",
+        sourceUrl: "https://github.com/",
+        liveUrl: "https://example.com/",
     },
 ];
 
@@ -99,31 +121,24 @@ export default function Projects() {
                 <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
                     {projects.map((project) => (
                         <div
-                            key={project.id}
+                            key={project.title}
                             className="project-reveal group"
                         >
                             <div className="apple-card apple-card-hover overflow-hidden h-full flex flex-col">
                                 {/* Card visual */}
-                                <div className="relative h-36 overflow-hidden bg-white/[0.02]">
+                                <div className="relative aspect-[16/9] overflow-hidden bg-white/[0.02]">
                                     <div
                                         className="absolute inset-0 opacity-10 group-hover:opacity-20 transition-opacity duration-500"
                                         style={{
                                             background: `radial-gradient(ellipse at center, ${project.color}40, transparent 70%)`,
                                         }}
                                     />
-                                    <div className="absolute inset-0 flex items-center justify-center">
-                                        <div
-                                            className="w-16 h-16 rounded-2xl border border-white/[0.06] flex items-center justify-center group-hover:scale-105 transition-transform duration-500"
-                                            style={{ borderColor: `${project.color}20` }}
-                                        >
-                      <span
-                          className="font-display text-xl font-bold tracking-tighter"
-                          style={{ color: `${project.color}80` }}
-                      >
-                        {project.id}
-                      </span>
-                                        </div>
-                                    </div>
+                                    <img
+                                        src={project.image}
+                                        alt={`${project.title} preview`}
+                                        className="relative z-10 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                        loading="lazy"
+                                    />
                                 </div>
 
                                 {/* Content */}
@@ -147,14 +162,26 @@ export default function Projects() {
                                     </div>
 
                                     <div className="flex items-center gap-3 pt-3 border-t border-white/[0.04]">
-                                        <button className="flex items-center gap-1.5 text-[#6e6e73] hover:text-white transition-colors text-[11px] font-medium tracking-wider uppercase">
+                                        <a
+                                            href={project.sourceUrl}
+                                            target="_blank"
+                                            rel="noreferrer"
+                                            className="flex items-center gap-1.5 text-[#6e6e73] hover:text-white transition-colors text-[11px] font-medium tracking-wider uppercase"
+                                            aria-label={`View ${project.title} source code`}
+                                        >
                                             <GitBranch className="w-3.5 h-3.5" />
                                             Source
-                                        </button>
-                                        <button className="flex items-center gap-1.5 text-[#6e6e73] hover:text-white transition-colors text-[11px] font-medium tracking-wider uppercase ml-auto group/btn">
+                                        </a>
+                                        <a
+                                            href={project.liveUrl}
+                                            target="_blank"
+                                            rel="noreferrer"
+                                            className="flex items-center gap-1.5 text-[#6e6e73] hover:text-white transition-colors text-[11px] font-medium tracking-wider uppercase ml-auto group/btn"
+                                            aria-label={`View ${project.title} live project`}
+                                        >
                                             Live
                                             <ArrowUpRight className="w-3.5 h-3.5 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" />
-                                        </button>
+                                        </a>
                                     </div>
                                 </div>
 
