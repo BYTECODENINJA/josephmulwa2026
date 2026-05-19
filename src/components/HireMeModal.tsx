@@ -192,8 +192,6 @@ function EmploymentForm() {
         try {
             await submitFormToEmail(form, {
                 subject: "New employment inquiry from josephmulwa.com",
-                pdfTitle: "Employment Inquiry",
-                filePrefix: "employment-inquiry",
             });
             form.reset();
             setStatus("sent");
@@ -248,7 +246,7 @@ function EmploymentForm() {
                 <ChevronRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
             </button>
             {status === "sent" && (
-                <p className="text-base text-green-400">Sent. A minimal PDF copy was emailed successfully.</p>
+                <p className="text-base text-green-400">Sent. Your inquiry was emailed successfully.</p>
             )}
             {status === "error" && (
                 <p className="text-base text-[#ff0033]">Something went wrong while sending. Please try again.</p>
@@ -268,8 +266,6 @@ function ProjectForm() {
         try {
             await submitFormToEmail(form, {
                 subject: "New project request from josephmulwa.com",
-                pdfTitle: "Project Request",
-                filePrefix: "project-request",
             });
             form.reset();
             setStatus("sent");
@@ -328,7 +324,7 @@ function ProjectForm() {
                 <Send className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
             </button>
             {status === "sent" && (
-                <p className="text-base text-green-400">Sent. A minimal PDF copy was emailed successfully.</p>
+                <p className="text-base text-green-400">Sent. Your project request was emailed successfully.</p>
             )}
             {status === "error" && (
                 <p className="text-base text-[#ff0033]">Something went wrong while sending. Please try again.</p>

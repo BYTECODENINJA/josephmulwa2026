@@ -47,8 +47,6 @@ export default function Contact() {
         try {
             await submitFormToEmail(form, {
                 subject: "New contact message from josephmulwa.com",
-                pdfTitle: "Contact Message",
-                filePrefix: "contact-message",
             });
             form.reset();
             setStatus("sent");
@@ -165,7 +163,7 @@ export default function Contact() {
                             </div>
                         </div>
                         {status === "sent" && (
-                            <p className="text-base text-green-400">Sent. A minimal PDF copy was emailed successfully.</p>
+                            <p className="text-base text-green-400">Sent. Your message was emailed successfully.</p>
                         )}
                         {status === "error" && (
                             <p className="text-base text-[#ff0033]">Something went wrong while sending. Please try again.</p>
