@@ -1,18 +1,20 @@
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState, type FormEvent } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Calendar, Mail, MapPin, MessageSquare, Phone, Send } from "lucide-react";
+import { submitFormToEmail } from "../lib/form-submission";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const contactCards = [
-    { icon: Mail, label: "Email", value: "joseph@example.com", href: "mailto:joseph@example.com", color: "#ff0033" },
+    { icon: Mail, label: "Email", value: "josephmulwa8055@gmail.com", href: "mailto:josephmulwa8055@gmail.com", color: "#ff0033" },
     { icon: Phone, label: "Phone", value: "+254 700 000 000", href: "tel:+254700000000", color: "#00f0ff" },
     { icon: MapPin, label: "Location", value: "Nairobi, Kenya", href: "#contact", color: "#ff00ff" },
 ];
 
 export default function Contact() {
     const sectionRef = useRef<HTMLElement>(null);
+    const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
 
     useEffect(() => {
         const ctx = gsap.context(() => {
@@ -36,6 +38,24 @@ export default function Contact() {
         }, sectionRef);
         return () => ctx.revert();
     }, []);
+
+    const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
+        event.preventDefault();
+        const form = event.currentTarget;
+        setStatus("sending");
+
+        try {
+            await submitFormToEmail(form, {
+                subject: "New contact message from josephmulwa.com",
+                pdfTitle: "Contact Message",
+                filePrefix: "contact-message",
+            });
+            form.reset();
+            setStatus("sent");
+        } catch {
+            setStatus("error");
+        }
+    };
 
     return (
         <section ref={sectionRef} id="contact" className="relative py-32 px-6">
@@ -86,21 +106,25 @@ export default function Contact() {
                         </div>
                     </div>
 
-                    <form className="contact-reveal apple-card p-6 md:p-7 space-y-5" onSubmit={(event) => event.preventDefault()}>
+                    <form className="contact-reveal apple-card p-6 md:p-7 space-y-5" onSubmit={handleSubmit}>
                         <div className="grid sm:grid-cols-2 gap-4">
                             <label className="space-y-2">
                                 <span className="text-base font-medium tracking-[0.14em] text-[#6e6e73] uppercase">Name</span>
                                 <input
+                                    name="name"
                                     className="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/[0.06] text-white font-body text-base placeholder:text-[#6e6e73]/50 focus:border-white/[0.15] focus:outline-none focus:ring-1 focus:ring-white/[0.08] transition-all"
                                     placeholder="Your name"
+                                    required
                                 />
                             </label>
                             <label className="space-y-2">
                                 <span className="text-base font-medium tracking-[0.14em] text-[#6e6e73] uppercase">Email</span>
                                 <input
+                                    name="email"
                                     type="email"
                                     className="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/[0.06] text-white font-body text-base placeholder:text-[#6e6e73]/50 focus:border-white/[0.15] focus:outline-none focus:ring-1 focus:ring-white/[0.08] transition-all"
                                     placeholder="you@email.com"
+                                    required
                                 />
                             </label>
                         </div>
@@ -108,26 +132,31 @@ export default function Contact() {
                         <label className="block space-y-2">
                             <span className="text-base font-medium tracking-[0.14em] text-[#6e6e73] uppercase">Project Type</span>
                             <input
+                                name="projectType"
                                 className="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/[0.06] text-white font-body text-base placeholder:text-[#6e6e73]/50 focus:border-white/[0.15] focus:outline-none focus:ring-1 focus:ring-white/[0.08] transition-all"
                                 placeholder="Fullstack app, API, portfolio, DevOps setup..."
+                                required
                             />
                         </label>
 
                         <label className="block space-y-2">
                             <span className="text-base font-medium tracking-[0.14em] text-[#6e6e73] uppercase">Message</span>
                             <textarea
+                                name="message"
                                 rows={6}
                                 className="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/[0.06] text-white font-body text-base placeholder:text-[#6e6e73]/50 focus:border-white/[0.15] focus:outline-none focus:ring-1 focus:ring-white/[0.08] transition-all resize-none"
                                 placeholder="Tell me what you want to build..."
+                                required
                             />
                         </label>
 
                         <div className="flex flex-col sm:flex-row sm:items-center gap-3">
                             <button
                                 type="submit"
+                                disabled={status === "sending"}
                                 className="flex items-center justify-center gap-2 rounded-xl bg-white px-5 py-3 text-base font-medium text-black hover:bg-white/90 transition-colors group"
                             >
-                                Send Message
+                                {status === "sending" ? "Sending..." : "Send Message"}
                                 <Send className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
                             </button>
                             <div className="flex items-center gap-2 text-[#6e6e73]">
@@ -135,6 +164,12 @@ export default function Contact() {
                                 <span className="text-base font-medium tracking-wider uppercase">Usually replies within 24 hours</span>
                             </div>
                         </div>
+                        {status === "sent" && (
+                            <p className="text-base text-green-400">Sent. A minimal PDF copy was emailed successfully.</p>
+                        )}
+                        {status === "error" && (
+                            <p className="text-base text-[#ff0033]">Something went wrong while sending. Please try again.</p>
+                        )}
                     </form>
                 </div>
             </div>

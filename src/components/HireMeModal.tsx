@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, type FormEvent } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
     X,
@@ -15,6 +15,7 @@ import {
     Send,
     ChevronRight,
 } from "lucide-react";
+import { submitFormToEmail } from "../lib/form-submission";
 
 const budgetRanges = [
     "KSh 50,000 - 100,000",
@@ -181,103 +182,157 @@ function StyledTextArea(props: React.TextareaHTMLAttributes<HTMLTextAreaElement>
 }
 
 function EmploymentForm() {
+    const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
+
+    const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
+        event.preventDefault();
+        const form = event.currentTarget;
+        setStatus("sending");
+
+        try {
+            await submitFormToEmail(form, {
+                subject: "New employment inquiry from josephmulwa.com",
+                pdfTitle: "Employment Inquiry",
+                filePrefix: "employment-inquiry",
+            });
+            form.reset();
+            setStatus("sent");
+        } catch {
+            setStatus("error");
+        }
+    };
+
     return (
-        <form className="space-y-5" onSubmit={(e) => e.preventDefault()}>
+        <form className="space-y-5" onSubmit={handleSubmit}>
             <div className="grid sm:grid-cols-2 gap-4">
                 <InputGroup label="Employer / Company" icon={Building2}>
-                    <StyledInput placeholder="Company name" />
+                    <StyledInput name="company" placeholder="Company name" required />
                 </InputGroup>
                 <InputGroup label="Role Hiring For" icon={Briefcase}>
-                    <StyledInput placeholder="e.g. Senior Fullstack Developer" />
+                    <StyledInput name="role" placeholder="e.g. Senior Fullstack Developer" required />
                 </InputGroup>
             </div>
 
             <div className="grid sm:grid-cols-2 gap-4">
                 <InputGroup label="Email" icon={Mail}>
-                    <StyledInput type="email" placeholder="hr@company.com" />
+                    <StyledInput name="email" type="email" placeholder="hr@company.com" required />
                 </InputGroup>
                 <InputGroup label="Contact" icon={Phone}>
-                    <StyledInput placeholder="Phone number" />
+                    <StyledInput name="phone" placeholder="Phone number" required />
                 </InputGroup>
             </div>
 
             <div className="grid sm:grid-cols-2 gap-4">
                 <InputGroup label="Employment Type" icon={Layers}>
-                    <StyledSelect options={employmentTypes} />
+                    <StyledSelect name="employmentType" options={employmentTypes} required />
                 </InputGroup>
                 <InputGroup label="Work Location" icon={MapPin}>
-                    <StyledSelect options={workLocations} />
+                    <StyledSelect name="workLocation" options={workLocations} required />
                 </InputGroup>
             </div>
 
             <InputGroup label="Job Description" icon={FileText}>
-                <StyledTextArea rows={4} placeholder="Describe the role, responsibilities, and expectations..." />
+                <StyledTextArea name="jobDescription" rows={4} placeholder="Describe the role, responsibilities, and expectations..." required />
             </InputGroup>
 
             <InputGroup label="Required Skills" icon={Layers}>
-                <StyledInput placeholder="e.g. React, Node.js, Docker, AWS" />
+                <StyledInput name="requiredSkills" placeholder="e.g. React, Node.js, Docker, AWS" required />
             </InputGroup>
 
             <button
                 type="submit"
+                disabled={status === "sending"}
                 className="w-full py-3.5 bg-white text-black font-medium text-base rounded-xl hover:bg-white/90 transition-colors flex items-center justify-center gap-2 group"
             >
-                Submit Application
+                {status === "sending" ? "Sending..." : "Submit Application"}
                 <ChevronRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
             </button>
+            {status === "sent" && (
+                <p className="text-base text-green-400">Sent. A minimal PDF copy was emailed successfully.</p>
+            )}
+            {status === "error" && (
+                <p className="text-base text-[#ff0033]">Something went wrong while sending. Please try again.</p>
+            )}
         </form>
     );
 }
 
 function ProjectForm() {
+    const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
+
+    const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
+        event.preventDefault();
+        const form = event.currentTarget;
+        setStatus("sending");
+
+        try {
+            await submitFormToEmail(form, {
+                subject: "New project request from josephmulwa.com",
+                pdfTitle: "Project Request",
+                filePrefix: "project-request",
+            });
+            form.reset();
+            setStatus("sent");
+        } catch {
+            setStatus("error");
+        }
+    };
+
     return (
-        <form className="space-y-5" onSubmit={(e) => e.preventDefault()}>
+        <form className="space-y-5" onSubmit={handleSubmit}>
             <div className="grid sm:grid-cols-2 gap-4">
                 <InputGroup label="Client Name" icon={User}>
-                    <StyledInput placeholder="Your name" />
+                    <StyledInput name="name" placeholder="Your name" required />
                 </InputGroup>
                 <InputGroup label="Company (Optional)" icon={Building2}>
-                    <StyledInput placeholder="Company name" />
+                    <StyledInput name="company" placeholder="Company name" />
                 </InputGroup>
             </div>
 
             <div className="grid sm:grid-cols-2 gap-4">
                 <InputGroup label="Email" icon={Mail}>
-                    <StyledInput type="email" placeholder="you@email.com" />
+                    <StyledInput name="email" type="email" placeholder="you@email.com" required />
                 </InputGroup>
                 <InputGroup label="Contact" icon={Phone}>
-                    <StyledInput placeholder="Phone number" />
+                    <StyledInput name="phone" placeholder="Phone number" required />
                 </InputGroup>
             </div>
 
             <div className="grid sm:grid-cols-2 gap-4">
                 <InputGroup label="Project Type" icon={Layers}>
-                    <StyledSelect options={projectTypes} />
+                    <StyledSelect name="projectType" options={projectTypes} required />
                 </InputGroup>
                 <InputGroup label="Budget Range (KSh)" icon={DollarSign}>
-                    <StyledSelect options={budgetRanges} />
+                    <StyledSelect name="budgetRange" options={budgetRanges} required />
                 </InputGroup>
             </div>
 
             <InputGroup label="Project Timeline" icon={Clock}>
-                <StyledInput placeholder="e.g. 2-3 weeks, 1-2 months" />
+                <StyledInput name="timeline" placeholder="e.g. 2-3 weeks, 1-2 months" required />
             </InputGroup>
 
             <InputGroup label="Project Description" icon={FileText}>
-                <StyledTextArea rows={4} placeholder="Describe your project, goals, and any specific requirements..." />
+                <StyledTextArea name="projectDescription" rows={4} placeholder="Describe your project, goals, and any specific requirements..." required />
             </InputGroup>
 
             <InputGroup label="Preferred Tech Stack" icon={Layers}>
-                <StyledInput placeholder="e.g. React + Node.js + PostgreSQL" />
+                <StyledInput name="preferredTechStack" placeholder="e.g. React + Node.js + PostgreSQL" />
             </InputGroup>
 
             <button
                 type="submit"
+                disabled={status === "sending"}
                 className="w-full py-3.5 bg-white text-black font-medium text-base rounded-xl hover:bg-white/90 transition-colors flex items-center justify-center gap-2 group"
             >
-                Send Project Request
+                {status === "sending" ? "Sending..." : "Send Project Request"}
                 <Send className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
             </button>
+            {status === "sent" && (
+                <p className="text-base text-green-400">Sent. A minimal PDF copy was emailed successfully.</p>
+            )}
+            {status === "error" && (
+                <p className="text-base text-[#ff0033]">Something went wrong while sending. Please try again.</p>
+            )}
         </form>
     );
 }
