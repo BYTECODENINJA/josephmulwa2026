@@ -8,9 +8,9 @@ gsap.registerPlugin(ScrollTrigger);
 const projects = [
     {
         id: "01",
-        title: "E-Commerce Platform",
-        description: "Fullstack MERN marketplace with real-time inventory, Stripe payments, and admin dashboard.",
-        tags: ["React", "Node.js", "MongoDB", "Stripe"],
+        title: "AI powered Resume Creator.",
+        description: "ResumeFlow is a modern, high-performance resume builder designed to help you create professional, ATS-friendly resumes with ease. Built with React, TypeScript, and Vite, it offers a seamless and interactive user experience.",
+        tags: ["React", "Vite", "Typescript", "Supabase"],
         color: "#ff0033",
     },
     {
@@ -92,7 +92,7 @@ export default function Projects() {
                 <h2 className="project-reveal font-display text-3xl sm:text-4xl md:text-5xl text-white mb-4 tracking-tight">
                     Featured Work
                 </h2>
-                <p className="project-reveal font-body text-[15px] text-[#6e6e73] max-w-lg mb-16">
+                <p className="project-reveal font-body text-[15px] text-[#ddfef8] max-w-lg mb-16">
                     A curated collection of builds. Each represents a unique deployment in my development journey.
                 </p>
 
@@ -131,7 +131,7 @@ export default function Projects() {
                                     <h3 className="font-display text-sm font-semibold text-white mb-2 tracking-tight group-hover:text-white/90 transition-colors">
                                         {project.title}
                                     </h3>
-                                    <p className="font-body text-[13px] text-[#86868b] leading-relaxed mb-4 flex-1">
+                                    <p className="font-body text-[15px] text-[#ddfef8] leading-relaxed mb-4 flex-1">
                                         {project.description}
                                     </p>
 
@@ -139,7 +139,7 @@ export default function Projects() {
                                         {project.tags.map((tag) => (
                                             <span
                                                 key={tag}
-                                                className="text-[10px] font-medium tracking-wider px-2 py-1 rounded-full border border-white/[0.06] text-[#6e6e73] bg-white/[0.02]"
+                                                className="text-[12px] font-medium tracking-wider px-2 py-1 rounded-full border border-white/[0.06] text-[#feef4c] bg-white/[0.02]"
                                             >
                         {tag}
                       </span>

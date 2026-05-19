@@ -7,20 +7,21 @@ import {
     Server,
     GitBranch,
     Container,
-    Sparkles,
+    Sparkles, Braces, FileJson,
 } from "lucide-react";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const skillCategories = [
     {
-        title: "Languages & Frameworks",
+        title: "Frameworks",
         icon: Code2,
         accent: "#ff0033",
         skills: [
             { name: "React.js", level: 92 },
             { name: "Express.js", level: 85 },
             { name: "GSAP", level: 78 },
+            {name: "Node.js", level: 70}
         ],
     },
     {
@@ -43,6 +44,16 @@ const skillCategories = [
             { name: "GitHub", level: 88 },
         ],
     },
+    {
+        title: "Languages",
+        icon: Braces,
+        accent: "#00ff89",
+        skills: [
+            { name: "JavaScript", level: 90 },
+            { name: "TypeScript", level: 85 },
+            { name: "Python", level: 75 },
+        ],
+    }
 ];
 
 const techStack = [
@@ -55,6 +66,9 @@ const techStack = [
     { icon: GitBranch, label: "Git", color: "#ff00ff" },
     { icon: GitBranch, label: "GitHub", color: "#00f0ff" },
     { icon: Sparkles, label: "GSAP", color: "#ff0033" },
+    {icon: Code2, label: "Next.js", color: "#00f0ff" },
+    {icon: Braces, label: "TypeScript", color: "#00f0ff" },
+    {icon: FileJson, label: "JavaScript", color: "#00f0ff" },
 ];
 
 export default function Skills() {
@@ -103,7 +117,7 @@ export default function Skills() {
                     A tactical overview of my development capabilities and the technologies I wield.
                 </p>
 
-                <div className="grid md:grid-cols-3 gap-4 mb-16">
+                <div className="grid md:grid-cols-2 gap-4 mb-16">
                     {skillCategories.map((category) => (
                         <div
                             key={category.title}
@@ -127,7 +141,7 @@ export default function Skills() {
                                     <div key={skill.name}>
                                         <div className="flex justify-between items-center mb-1.5">
                                             <span className="text-sm text-white/90">{skill.name}</span>
-                                            <span className="text-[11px] text-[#6e6e73] tabular-nums">
+                                            <span className="text-[11px] text-white/90 tabular-nums">
                         {skill.level}%
                       </span>
                                         </div>

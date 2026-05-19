@@ -20,17 +20,17 @@ gsap.registerPlugin(ScrollTrigger);
 
 const interests = [
     {
-        title: "IoT",
+        title: "Cybersecurity",
         icon: Wifi,
-        description: "Smart device ecosystems and sensor networks bridging physical and digital worlds.",
+        description: "Securing applications, APIs, and infrastructure against modern threats.Understanding security best practices, ethical hacking, and building secure applications from the ground up.",
         size: "large",
         color: "#ff0033",
         gridClass: "md:col-span-2 md:row-span-2",
     },
     {
-        title: "Cybersecurity",
+        title: "Web Perfomance",
         icon: Shield,
-        description: "Defensive protocols and penetration testing.",
+        description: "Optimizing load times, Core Web Vitals, and rendering strategies",
         size: "small",
         color: "#00f0ff",
         gridClass: "md:col-span-1",
@@ -46,9 +46,9 @@ const interests = [
     {
         title: "AI & ML",
         icon: Brain,
-        description: "Neural architectures and predictive models driving next-gen automation.",
+        description: "Exploring machine learning algorithms, neural networks, and AI-powered applications. Fascinated by how AI is transforming software development.",
         size: "large",
-        color: "#ff0033",
+        color: "#ff8000",
         gridClass: "md:col-span-2",
     },
     {
@@ -59,6 +59,21 @@ const interests = [
         color: "#00f0ff",
         gridClass: "md:col-span-1",
     },
+    {
+        title: "Blockchain & Web3.0",
+        icon: Cpu,
+        description: "Exploring decentralized applications, smart contracts, and the future of web technologies.Understanding how NFTs and crypto works.",
+        size: "large",
+        color: "#0600ef",
+    },
+    {
+        title: "System Design",
+        icon: Zap,
+        description: "Architecting distributed systems, databases, and APIs at scale.Designing scalable, reliable, and efficient software architectures for complex applications.",
+        size: "small",
+        color: "#ffe566",
+        gridClass: "md:col-span-2",
+    }
 ];
 
 const floatingIcons = [

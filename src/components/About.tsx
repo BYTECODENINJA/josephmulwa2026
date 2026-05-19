@@ -73,7 +73,7 @@ export default function About() {
                         </p>
                         <p className="about-reveal font-body text-[15px] text-[#6e6e73] leading-relaxed">
                             From architecting robust API layers to orchestrating Docker
-                            containers and CI/CD pipelines — every challenge is approached
+                            containers and CI/CD pipelines. Every challenge is approached
                             with precision and creative flair.
                         </p>
                     </div>

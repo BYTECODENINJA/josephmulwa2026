@@ -61,7 +61,7 @@ export default function Hero() {
     };
 
     const nameChars = "Joseph Mulwa".split("");
-    const subtitleChars = "Fullstack Engineer".split("");
+    const subtitleChars = "Fullstack Developer".split("");
 
     return (
         <section
