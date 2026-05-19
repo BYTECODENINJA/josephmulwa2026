@@ -2,6 +2,11 @@ import { useRef, useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ArrowUpRight, GitBranch } from "lucide-react";
+import resumeCreatorImage from "../assets/ResumeCreator.png";
+import financeTrackerImage from "../assets/financetracker.png";
+import rentosearchImage from "../assets/Rentosearch.png";
+import windowsPortfolioImage from "../assets/Windowsportfolio.png";
+import gamingWebsiteImage from "../assets/Gamingwebsite.png";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -21,7 +26,7 @@ const projects: Project[] = [
         description: "ResumeFlow is a modern, high-performance resume builder designed to help you create professional, ATS-friendly resumes with ease. Built with React, TypeScript, and Vite, it offers a seamless and interactive user experience.",
         tags: ["React", "Vite", "Typescript", "Supabase"],
         color: "#ff0033",
-        image: "../assets/ResumeCreator.png",
+        image: resumeCreatorImage,
         sourceUrl: "https://github.com/BYTECODENINJA/ResumeFlow",
         liveUrl: "https://resume-flow-rosy.vercel.app",
     },
@@ -30,7 +35,7 @@ const projects: Project[] = [
         description: "MoneyMate is a full-stack personal finance management application that lets you track income and expenses, visualise spending trends, scan receipts with AI, and receive scheduled financial reports — all in one place. Built for Kenya with a clean modern UI.",
         tags: ["TypeScript", "Next.js", "MongoDb", "GenAI"],
         color: "#00f0ff",
-        image: "../assets/financetracker.png",
+        image: financeTrackerImage,
         sourceUrl: "https://github.com/BYTECODENINJA/moneymate",
         liveUrl: "https://moneymate-two.vercel.app",
     },
@@ -39,7 +44,7 @@ const projects: Project[] = [
         description: "A rentals searching website hosted for kenyan property owners and property seekers to make property finding much easier",
         tags: ["React", "GSAP", "Vite", "Typescript", "Convex"],
         color: "#ff00ff",
-        image: "../assets/Rentosearch.png",
+        image: rentosearchImage,
         sourceUrl: "https://www.rentosearch.co.ke",
         liveUrl: "https://www.rentosearch.co.ke",
     },
@@ -48,7 +53,7 @@ const projects: Project[] = [
         description: "A Windows UI-style portfolio website for a fullstack developer. Features a dynamic resume section, blog section, contact form, and more — all in a Windows-inspired design.",
         tags: ["NextJs", "React", "Typescript"],
         color: "#ff0033",
-        image: "../assets/Windowsportfolio.png",
+        image: windowsPortfolioImage,
         sourceUrl: "https://github.com/BYTECODENINJA/WindowsPortfolio",
         liveUrl: "https://windows-portfolio-ruby.vercel.app",
     },
@@ -57,7 +62,7 @@ const projects: Project[] = [
         description: "A fully animated landing page for a gaming website with a clean and modern design. Features a dynamic navbar, smooth scroll animation, parallax effect, and fully responsive layout.",
         tags: ["Vite", "React", "Javascript", "GSAP"],
         color: "#00f0ff",
-        image: "../assets/Gamingwebsite.png",
+        image: gamingWebsiteImage,
         sourceUrl: "https://github.com/BYTECODENINJA/gamingwebsite",
         liveUrl: "https://gaminglandingpage.vercel.app",
     },
