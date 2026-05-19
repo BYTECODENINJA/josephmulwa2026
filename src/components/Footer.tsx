@@ -82,7 +82,7 @@ export default function Footer() {
                         <h4 className="text-base font-medium tracking-[0.15em] text-[#6e6e73] uppercase mb-6">
                             Navigation
                         </h4>
-                        <ul className="space-y-3">
+                        <ul className="grid grid-cols-2 gap-x-8 gap-y-3">
                             {quickLinks.map((link) => (
                                 <li key={link.label}>
                                     {link.href ? (
