@@ -133,7 +133,7 @@ export default function Interests() {
 
             <div className="relative z-10 max-w-7xl mx-auto">
                 <div className="bento-reveal mb-6">
-          <span className="text-[11px] font-medium tracking-[0.2em] text-[#ff00ff] uppercase">
+          <span className="text-base font-medium tracking-[0.2em] text-[#ff00ff] uppercase">
             Interests
           </span>
                 </div>
@@ -142,7 +142,7 @@ export default function Interests() {
                     Areas of Interest
                 </h2>
 
-                <div className="grid md:grid-cols-4 gap-3 auto-rows-[160px]">
+                <div className="grid md:grid-cols-4 gap-3 auto-rows-[minmax(220px,auto)]">
                     {interests.map((item) => (
                         <div
                             key={item.title}
@@ -162,23 +162,23 @@ export default function Interests() {
                                         style={{ color: item.color }}
                                     />
                                     <span
-                                        className="text-[10px] font-medium tracking-wider opacity-30 uppercase"
+                                        className="text-base font-medium tracking-wider opacity-30 uppercase"
                                         style={{ color: item.color }}
                                     >
                     {item.size}
                   </span>
                                 </div>
 
-                                <h3 className="font-display text-base font-semibold text-white mb-2 tracking-tight">
+                                <h3 className="font-display text-xl font-semibold text-white mb-2 tracking-tight">
                                     {item.title}
                                 </h3>
-                                <p className="font-body text-[13px] text-[#86868b] leading-relaxed flex-1">
+                                <p className="font-body text-base text-[#86868b] leading-relaxed flex-1">
                                     {item.description}
                                 </p>
 
                                 <div className="mt-4 flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                     <div className="h-px flex-1" style={{ backgroundColor: `${item.color}25` }} />
-                                    <span className="text-[10px] font-medium tracking-wider uppercase" style={{ color: item.color }}>
+                                    <span className="text-base font-medium tracking-wider uppercase" style={{ color: item.color }}>
                     Explore
                   </span>
                                 </div>

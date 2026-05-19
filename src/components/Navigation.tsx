@@ -44,12 +44,12 @@ export default function Navigation() {
                     J.Mulwa
                 </a>
 
-                <div className="hidden md:flex items-center gap-5">
+                <div className="hidden lg:flex items-center gap-5">
                     {navItems.map((item) => (
                         <button
                             key={item.label}
                             onClick={() => scrollTo(item.href)}
-                            className="text-sm text-[#86868b] hover:text-white transition-colors duration-300 relative group"
+                            className="text-base text-[#86868b] hover:text-white transition-colors duration-300 relative group"
                         >
                             {item.label}
                             <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-white/40 group-hover:w-full transition-all duration-300" />
@@ -57,20 +57,20 @@ export default function Navigation() {
                     ))}
                     <button
                         onClick={() => window.dispatchEvent(new CustomEvent("open-hire-modal"))}
-                        className="text-sm px-5 py-2 bg-white/[0.06] text-white rounded-full border border-white/[0.08] hover:bg-white/[0.1] hover:border-white/[0.15] transition-all duration-300"
+                        className="text-base px-5 py-2 bg-white/[0.06] text-white rounded-full border border-white/[0.08] hover:bg-white/[0.1] hover:border-white/[0.15] transition-all duration-300"
                     >
                         Hire Me
                     </button>
                 </div>
 
-                <button className="md:hidden text-white" onClick={() => setMenuOpen(!menuOpen)}>
+                <button className="lg:hidden text-white" onClick={() => setMenuOpen(!menuOpen)}>
                     {menuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
                 </button>
             </div>
 
             {/* Mobile menu */}
             {menuOpen && (
-                <div className="md:hidden bg-black/95 backdrop-blur-2xl border-t border-white/[0.04] px-6 py-8">
+                <div className="lg:hidden bg-black/95 backdrop-blur-2xl border-t border-white/[0.04] px-6 py-8">
                     <div className="flex flex-col gap-5">
                         {navItems.map((item) => (
                             <button
@@ -86,7 +86,7 @@ export default function Navigation() {
                                 setMenuOpen(false);
                                 window.dispatchEvent(new CustomEvent("open-hire-modal"));
                             }}
-                            className="text-sm px-5 py-3 bg-white/[0.06] text-white rounded-full border border-white/[0.08] hover:bg-white/[0.1] transition-all mt-2"
+                            className="text-base px-5 py-3 bg-white/[0.06] text-white rounded-full border border-white/[0.08] hover:bg-white/[0.1] transition-all mt-2"
                         >
                             Hire Me
                         </button>

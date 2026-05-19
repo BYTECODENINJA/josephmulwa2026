@@ -53,7 +53,7 @@ export default function TechJourney() {
         <section ref={sectionRef} id="tech-journey" className="relative py-32 px-6 overflow-hidden">
             <div className="relative z-10 max-w-7xl mx-auto">
                 <div className="journey-reveal mb-6">
-                    <span className="text-[11px] font-medium tracking-[0.2em] text-[#00f0ff] uppercase">
+                    <span className="text-base font-medium tracking-[0.2em] text-[#00f0ff] uppercase">
                         Tech Journey
                     </span>
                 </div>
@@ -63,13 +63,13 @@ export default function TechJourney() {
                         <h2 className="font-display text-3xl sm:text-4xl md:text-5xl text-white mb-4 tracking-tight">
                             Work Experience Timeline
                         </h2>
-                        <p className="font-body text-[15px] text-[#6e6e73] max-w-2xl">
+                        <p className="font-body text-lg text-[#6e6e73] max-w-2xl">
                             A timeline of the places I have worked, what I contributed, and the technologies I practiced along the way.
                         </p>
                     </div>
                     <div className="flex w-fit items-center gap-2 px-4 py-2 rounded-full border border-white/[0.06] bg-white/[0.02]">
                         <GitBranch className="w-3.5 h-3.5 text-[#ff0033]" />
-                        <span className="text-[11px] font-medium tracking-wider text-[#86868b] uppercase">
+                        <span className="text-base font-medium tracking-wider text-[#86868b] uppercase">
                             Career Path
                         </span>
                     </div>
@@ -95,7 +95,7 @@ export default function TechJourney() {
                                                 <div>
                                                     <div className="flex items-center gap-2 mb-3">
                                                         <Code2 className="w-4 h-4" style={{ color: role.color }} />
-                                                        <span className="text-[10px] font-medium tracking-[0.16em] uppercase" style={{ color: role.color }}>
+                                                        <span className="text-base font-medium tracking-[0.16em] uppercase" style={{ color: role.color }}>
                                                             Position
                                                         </span>
                                                     </div>
@@ -104,7 +104,7 @@ export default function TechJourney() {
                                                     </h3>
                                                 </div>
 
-                                                <span className="inline-flex w-fit items-center gap-2 rounded-full border border-white/[0.06] bg-white/[0.02] px-3 py-1.5 text-[11px] font-medium tracking-wider text-[#86868b] uppercase">
+                                                <span className="inline-flex w-fit items-center gap-2 rounded-full border border-white/[0.06] bg-white/[0.02] px-3 py-1.5 text-base font-medium tracking-wider text-[#86868b] uppercase">
                                                     <Calendar className="w-3.5 h-3.5 text-[#ff0033]" />
                                                     {role.period}
                                                 </span>
@@ -114,24 +114,24 @@ export default function TechJourney() {
                                                 <div className="rounded-xl border border-white/[0.06] bg-white/[0.02] p-4">
                                                     <div className="flex items-center gap-2 mb-2">
                                                         <Building2 className="w-3.5 h-3.5 text-[#ff00ff]" />
-                                                        <span className="text-[10px] font-medium tracking-[0.16em] uppercase text-[#6e6e73]">
+                                                        <span className="text-base font-medium tracking-[0.16em] uppercase text-[#6e6e73]">
                                                             Organisation
                                                         </span>
                                                     </div>
-                                                    <p className="font-body text-sm text-white/90">{role.organisation}</p>
+                                                    <p className="font-body text-base text-white/90">{role.organisation}</p>
                                                 </div>
                                                 <div className="rounded-xl border border-white/[0.06] bg-white/[0.02] p-4">
                                                     <div className="flex items-center gap-2 mb-2">
                                                         <MapPin className="w-3.5 h-3.5 text-[#00f0ff]" />
-                                                        <span className="text-[10px] font-medium tracking-[0.16em] uppercase text-[#6e6e73]">
+                                                        <span className="text-base font-medium tracking-[0.16em] uppercase text-[#6e6e73]">
                                                             Location
                                                         </span>
                                                     </div>
-                                                    <p className="font-body text-sm text-white/90">{role.location}</p>
+                                                    <p className="font-body text-base text-white/90">{role.location}</p>
                                                 </div>
                                             </div>
 
-                                            <p className="font-body text-sm text-[#86868b] leading-relaxed mb-5">
+                                            <p className="font-body text-base text-[#86868b] leading-relaxed mb-5">
                                                 {role.summary}
                                             </p>
 
@@ -139,7 +139,7 @@ export default function TechJourney() {
                                                 {role.highlights.map((item) => (
                                                     <div key={item} className="flex gap-3">
                                                         <Server className="mt-0.5 h-3.5 w-3.5 shrink-0 text-[#00f0ff]" />
-                                                        <p className="font-body text-[13px] leading-relaxed text-[#86868b]">
+                                                        <p className="font-body text-base leading-relaxed text-[#86868b]">
                                                             {item}
                                                         </p>
                                                     </div>
@@ -150,7 +150,7 @@ export default function TechJourney() {
                                                 {role.stack.map((item) => (
                                                     <span
                                                         key={item}
-                                                        className="text-[10px] font-medium tracking-wider px-2.5 py-1 rounded-full border border-white/[0.06] text-[#6e6e73] bg-white/[0.02]"
+                                                        className="text-base font-medium tracking-wider px-2.5 py-1 rounded-full border border-white/[0.06] text-[#6e6e73] bg-white/[0.02]"
                                                     >
                                                         {item}
                                                     </span>

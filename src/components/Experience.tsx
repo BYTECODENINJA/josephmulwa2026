@@ -78,7 +78,7 @@ export default function Experience() {
         >
             <div className="relative z-10 max-w-7xl mx-auto">
                 <div className="exp-reveal mb-6">
-          <span className="text-[11px] font-medium tracking-[0.2em] text-[#ff0033] uppercase">
+          <span className="text-base font-medium tracking-[0.2em] text-[#ff0033] uppercase">
             Experience
           </span>
                 </div>
@@ -111,19 +111,19 @@ export default function Experience() {
 
                                 <div className="flex-1 min-w-0">
                                     <div className="flex items-center justify-between mb-2">
-                                        <h3 className="font-display text-base font-semibold text-white tracking-tight">
+                                        <h3 className="font-display text-xl font-semibold text-white tracking-tight">
                                             {exp.title}
                                         </h3>
                                         <ArrowRight className="w-4 h-4 text-[#6e6e73] group-hover:text-white group-hover:translate-x-0.5 transition-all opacity-0 group-hover:opacity-100" />
                                     </div>
-                                    <p className="font-body text-sm text-[#86868b] leading-relaxed mb-4">
+                                    <p className="font-body text-base text-[#86868b] leading-relaxed mb-4">
                                         {exp.description}
                                     </p>
                                     <div className="flex flex-wrap gap-2">
                                         {exp.tags.map((tag) => (
                                             <span
                                                 key={tag}
-                                                className="text-[10px] font-medium tracking-wider px-2.5 py-1 rounded-full border border-white/[0.06] text-[#6e6e73] bg-white/[0.02]"
+                                                className="text-base font-medium tracking-wider px-2.5 py-1 rounded-full border border-white/[0.06] text-[#6e6e73] bg-white/[0.02]"
                                             >
                         {tag}
                       </span>

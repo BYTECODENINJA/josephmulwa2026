@@ -105,7 +105,7 @@ export default function Skills() {
         >
             <div className="relative z-10 max-w-7xl mx-auto">
                 <div className="skill-reveal mb-6">
-          <span className="text-[11px] font-medium tracking-[0.2em] text-[#00f0ff] uppercase">
+          <span className="text-base font-medium tracking-[0.2em] text-[#00f0ff] uppercase">
             Skills
           </span>
                 </div>
@@ -113,7 +113,7 @@ export default function Skills() {
                 <h2 className="skill-reveal font-display text-3xl sm:text-4xl md:text-5xl text-white mb-4 tracking-tight">
                     Technical Arsenal
                 </h2>
-                <p className="skill-reveal font-body text-[15px] text-[#6e6e73] max-w-lg mb-16">
+                <p className="skill-reveal font-body text-lg text-[#6e6e73] max-w-lg mb-16">
                     A tactical overview of my development capabilities and the technologies I wield.
                 </p>
 
@@ -129,7 +129,7 @@ export default function Skills() {
                                     style={{ color: category.accent }}
                                 />
                                 <span
-                                    className="text-[11px] font-medium tracking-[0.15em] uppercase"
+                                    className="text-base font-medium tracking-[0.15em] uppercase"
                                     style={{ color: category.accent }}
                                 >
                   {category.title}
@@ -140,8 +140,8 @@ export default function Skills() {
                                 {category.skills.map((skill) => (
                                     <div key={skill.name}>
                                         <div className="flex justify-between items-center mb-1.5">
-                                            <span className="text-sm text-white/90">{skill.name}</span>
-                                            <span className="text-[11px] text-white/90 tabular-nums">
+                                            <span className="text-base text-white/90">{skill.name}</span>
+                                            <span className="text-base text-white/90 tabular-nums">
                         {skill.level}%
                       </span>
                                         </div>
@@ -172,7 +172,7 @@ export default function Skills() {
                                 className="flex shrink-0 items-center gap-2 rounded-full border border-white/[0.06] bg-black/30 px-5 py-2.5"
                             >
                                 <tech.icon className="w-3.5 h-3.5" style={{ color: tech.color }} />
-                                <span className="text-[11px] font-medium tracking-wider text-[#86868b] uppercase">
+                                <span className="text-base font-medium tracking-wider text-[#86868b] uppercase">
                                     {tech.label}
                                 </span>
                             </div>

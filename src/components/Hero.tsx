@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
 import { ArrowDown, ChevronRight, FileText, Download } from "lucide-react";
 import gsap from "gsap";
+import resumeUrl from "../assets/JosephMulwa.pdf";
 
 export default function Hero() {
     const sectionRef = useRef<HTMLElement>(null);
@@ -81,7 +82,7 @@ export default function Hero() {
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#ff0033] opacity-60" />
             <span className="relative inline-flex rounded-full h-2 w-2 bg-[#ff0033]" />
           </span>
-                    <span className="text-[11px] font-medium tracking-widest text-[#86868b] uppercase">
+                    <span className="text-base font-medium tracking-widest text-[#86868b] uppercase">
             Available for hire
           </span>
                 </div>
@@ -122,7 +123,7 @@ export default function Hero() {
                     ))}
                 </p>
 
-                <p className="font-body text-sm text-[#6e6e73] mb-12">
+                <p className="font-body text-base text-[#6e6e73] mb-12">
                     Computer Science — The Co-operative University of Kenya
                 </p>
 
@@ -130,7 +131,7 @@ export default function Hero() {
                 <div ref={ctaRef} className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
                     <button
                         onClick={() => window.dispatchEvent(new CustomEvent("open-hire-modal"))}
-                        className="group px-8 py-3.5 bg-white text-black font-medium text-sm rounded-full hover:bg-white/90 transition-all duration-300 flex items-center gap-2"
+                        className="group px-8 py-3.5 bg-white text-black font-medium text-base rounded-full hover:bg-white/90 transition-all duration-300 flex items-center gap-2"
                     >
                         <span>Hire Me</span>
                         <ChevronRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
@@ -138,29 +139,40 @@ export default function Hero() {
 
                     <button
                         onClick={() => scrollTo("#about")}
-                        className="px-8 py-3.5 border border-white/10 text-white/80 font-medium text-sm rounded-full hover:bg-white/5 hover:border-white/20 transition-all duration-300"
+                        className="px-8 py-3.5 border border-white/10 text-white/80 font-medium text-base rounded-full hover:bg-white/5 hover:border-white/20 transition-all duration-300"
                     >
                         Know More About Me
                     </button>
                 </div>
 
                 {/* Secondary Actions */}
-                <div className="flex items-center justify-center gap-8 text-sm">
-                    <button className="flex items-center gap-2 text-[#86868b] hover:text-white transition-colors duration-300 group">
+                <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 text-base">
+                    <a
+                        href={resumeUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                        aria-label="View Joseph Mulwa resume in a new browser tab"
+                        className="flex min-h-11 items-center justify-center gap-2 text-[#86868b] hover:text-white transition-colors duration-300 group"
+                    >
                         <FileText className="w-4 h-4 group-hover:scale-105 transition-transform" />
-                        <span className="text-xs tracking-wider uppercase">View Resume</span>
-                    </button>
-                    <div className="w-px h-3 bg-white/10" />
-                    <button className="flex items-center gap-2 text-[#86868b] hover:text-white transition-colors duration-300 group">
+                        <span className="text-base tracking-wider uppercase">View Resume</span>
+                    </a>
+                    <div className="hidden sm:block w-px h-3 bg-white/10" />
+                    <a
+                        href={resumeUrl}
+                        download="Joseph-Mulwa-Resume.pdf"
+                        aria-label="Download Joseph Mulwa resume as a PDF"
+                        className="flex min-h-11 items-center justify-center gap-2 text-[#86868b] hover:text-white transition-colors duration-300 group"
+                    >
                         <Download className="w-4 h-4 group-hover:scale-105 transition-transform" />
-                        <span className="text-xs tracking-wider uppercase">Download</span>
-                    </button>
+                        <span className="text-base tracking-wider uppercase">Download</span>
+                    </a>
                 </div>
             </div>
 
             {/* Scroll indicator */}
             <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-float-slow">
-        <span className="text-[10px] tracking-widest text-[#6e6e73] uppercase">
+        <span className="text-base tracking-widest text-[#6e6e73] uppercase">
           Scroll
         </span>
                 <ArrowDown className="w-4 h-4 text-[#6e6e73]" />

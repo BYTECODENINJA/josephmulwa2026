@@ -97,7 +97,7 @@ export default function Projects() {
         >
             <div className="relative z-10 max-w-7xl mx-auto">
                 <div className="project-reveal mb-6">
-          <span className="text-[11px] font-medium tracking-[0.2em] text-[#ff0033] uppercase">
+          <span className="text-base font-medium tracking-[0.2em] text-[#ff0033] uppercase">
             Projects
           </span>
                 </div>
@@ -105,7 +105,7 @@ export default function Projects() {
                 <h2 className="project-reveal font-display text-3xl sm:text-4xl md:text-5xl text-white mb-4 tracking-tight">
                     Featured Work
                 </h2>
-                <p className="project-reveal font-body text-[15px] text-[#ddfef8] max-w-lg mb-16">
+                <p className="project-reveal font-body text-lg text-[#ddfef8] max-w-lg mb-16">
                     A curated collection of builds. Each represents a unique deployment in my development journey.
                 </p>
 
@@ -134,10 +134,10 @@ export default function Projects() {
 
                                 {/* Content */}
                                 <div className="p-5 flex-1 flex flex-col">
-                                    <h3 className="font-display text-sm font-semibold text-white mb-2 tracking-tight group-hover:text-white/90 transition-colors">
+                                    <h3 className="font-display text-xl font-semibold text-white mb-2 tracking-tight group-hover:text-white/90 transition-colors">
                                         {project.title}
                                     </h3>
-                                    <p className="font-body text-[15px] text-[#ddfef8] leading-relaxed mb-4 flex-1">
+                                    <p className="font-body text-lg text-[#ddfef8] leading-relaxed mb-4 flex-1">
                                         {project.description}
                                     </p>
 
@@ -145,7 +145,7 @@ export default function Projects() {
                                         {project.tags.map((tag) => (
                                             <span
                                                 key={tag}
-                                                className="text-[12px] font-medium tracking-wider px-2 py-1 rounded-full border border-white/[0.06] text-[#feef4c] bg-white/[0.02]"
+                                                className="text-base font-medium tracking-wider px-2 py-1 rounded-full border border-white/[0.06] text-[#feef4c] bg-white/[0.02]"
                                             >
                         {tag}
                       </span>
@@ -157,7 +157,7 @@ export default function Projects() {
                                             href={project.sourceUrl}
                                             target="_blank"
                                             rel="noreferrer"
-                                            className="flex items-center gap-1.5 text-[#6e6e73] hover:text-white transition-colors text-[11px] font-medium tracking-wider uppercase"
+                                            className="flex items-center gap-1.5 text-[#6e6e73] hover:text-white transition-colors text-base font-medium tracking-wider uppercase"
                                             aria-label={`View ${project.title} source code`}
                                         >
                                             <GitBranch className="w-3.5 h-3.5" />
@@ -167,7 +167,7 @@ export default function Projects() {
                                             href={project.liveUrl}
                                             target="_blank"
                                             rel="noreferrer"
-                                            className="flex items-center gap-1.5 text-[#6e6e73] hover:text-white transition-colors text-[11px] font-medium tracking-wider uppercase ml-auto group/btn"
+                                            className="flex items-center gap-1.5 text-[#6e6e73] hover:text-white transition-colors text-base font-medium tracking-wider uppercase ml-auto group/btn"
                                             aria-label={`View ${project.title} live project`}
                                         >
                                             Live

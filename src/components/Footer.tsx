@@ -44,7 +44,7 @@ function ServerStatus() {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-60" />
                 <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-green-400" />
             </div>
-            <span className="text-[10px] font-medium tracking-wider text-[#6e6e73]">
+            <span className="text-base font-medium tracking-wider text-[#6e6e73]">
         <span className="text-green-400">ONLINE</span>
         <span className="mx-2 opacity-40">|</span>
         <span className="tabular-nums">{ping}ms</span>
@@ -70,7 +70,7 @@ export default function Footer() {
                 J.Mulwa
               </span>
                         </div>
-                        <p className="font-body text-[13px] text-[#6e6e73] leading-relaxed max-w-xs">
+                        <p className="font-body text-base text-[#6e6e73] leading-relaxed max-w-xs">
                             Fullstack Developer & DevOps enthusiast crafting digital
                             experiences with precision and creative flair.
                         </p>
@@ -79,7 +79,7 @@ export default function Footer() {
 
                     {/* Quick Links */}
                     <div>
-                        <h4 className="text-[11px] font-medium tracking-[0.15em] text-[#6e6e73] uppercase mb-6">
+                        <h4 className="text-base font-medium tracking-[0.15em] text-[#6e6e73] uppercase mb-6">
                             Navigation
                         </h4>
                         <ul className="space-y-3">
@@ -88,14 +88,14 @@ export default function Footer() {
                                     {link.href ? (
                                         <a
                                             href={link.href}
-                                            className="font-body text-[13px] text-[#86868b] hover:text-white transition-colors duration-300"
+                                            className="font-body text-base text-[#86868b] hover:text-white transition-colors duration-300"
                                         >
                                             {link.label}
                                         </a>
                                     ) : (
                                         <button
                                             onClick={link.action}
-                                            className="font-body text-[13px] text-[#86868b] hover:text-white transition-colors duration-300"
+                                            className="font-body text-base text-[#86868b] hover:text-white transition-colors duration-300"
                                         >
                                             {link.label}
                                         </button>
@@ -107,7 +107,7 @@ export default function Footer() {
 
                     {/* Social */}
                     <div>
-                        <h4 className="text-[11px] font-medium tracking-[0.15em] text-[#6e6e73] uppercase mb-6">
+                        <h4 className="text-base font-medium tracking-[0.15em] text-[#6e6e73] uppercase mb-6">
                             Connect
                         </h4>
                         <div className="flex gap-2 mb-6">
@@ -122,7 +122,7 @@ export default function Footer() {
                                 </a>
                             ))}
                         </div>
-                        <div className="space-y-2 text-[13px] text-[#6e6e73]">
+                        <div className="space-y-2 text-base text-[#6e6e73]">
                             <div className="flex items-center gap-2">
                                 <Code2 className="w-3.5 h-3.5 text-[#00f0ff] opacity-60" />
                                 <span className="font-body">TypeScript & React</span>
@@ -136,12 +136,12 @@ export default function Footer() {
                 </div>
 
                 <div className="border-t border-white/[0.04] pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-                    <p className="font-body text-[11px] text-[#6e6e73]">
+                    <p className="font-body text-base text-[#6e6e73]">
                         &copy; {new Date().getFullYear()} Joseph Mulwa. All systems nominal.
                     </p>
 
                     <div className="flex items-center gap-4">
-            <span className="text-[10px] font-medium tracking-widest text-[#6e6e73] uppercase">
+            <span className="text-base font-medium tracking-widest text-[#6e6e73] uppercase">
               Built with Vite + React
             </span>
                         <button

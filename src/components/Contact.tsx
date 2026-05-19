@@ -41,7 +41,7 @@ export default function Contact() {
         <section ref={sectionRef} id="contact" className="relative py-32 px-6">
             <div className="relative z-10 max-w-7xl mx-auto">
                 <div className="contact-reveal mb-6">
-                    <span className="text-[11px] font-medium tracking-[0.2em] text-[#ff0033] uppercase">
+                    <span className="text-base font-medium tracking-[0.2em] text-[#ff0033] uppercase">
                         Contacts
                     </span>
                 </div>
@@ -62,7 +62,7 @@ export default function Contact() {
                             <h2 className="font-display text-3xl sm:text-4xl text-white mb-4 tracking-tight">
                                 Let&apos;s Build the Next System
                             </h2>
-                            <p className="font-body text-[15px] text-[#86868b] leading-relaxed max-w-md">
+                            <p className="font-body text-lg text-[#86868b] leading-relaxed max-w-md">
                                 Open to fullstack roles, freelance builds, backend systems, and clean portfolio-grade web experiences.
                             </p>
                         </div>
@@ -76,10 +76,10 @@ export default function Contact() {
                                 >
                                     <item.icon className="w-4 h-4" style={{ color: item.color }} />
                                     <div>
-                                        <p className="text-[10px] font-medium tracking-[0.16em] uppercase text-[#6e6e73]">
+                                        <p className="text-base font-medium tracking-[0.16em] uppercase text-[#6e6e73]">
                                             {item.label}
                                         </p>
-                                        <p className="font-body text-[13px] text-white/90">{item.value}</p>
+                                        <p className="font-body text-base text-white/90">{item.value}</p>
                                     </div>
                                 </a>
                             ))}
@@ -89,35 +89,35 @@ export default function Contact() {
                     <form className="contact-reveal apple-card p-6 md:p-7 space-y-5" onSubmit={(event) => event.preventDefault()}>
                         <div className="grid sm:grid-cols-2 gap-4">
                             <label className="space-y-2">
-                                <span className="text-[11px] font-medium tracking-[0.14em] text-[#6e6e73] uppercase">Name</span>
+                                <span className="text-base font-medium tracking-[0.14em] text-[#6e6e73] uppercase">Name</span>
                                 <input
-                                    className="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/[0.06] text-white font-body text-[13px] placeholder:text-[#6e6e73]/50 focus:border-white/[0.15] focus:outline-none focus:ring-1 focus:ring-white/[0.08] transition-all"
+                                    className="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/[0.06] text-white font-body text-base placeholder:text-[#6e6e73]/50 focus:border-white/[0.15] focus:outline-none focus:ring-1 focus:ring-white/[0.08] transition-all"
                                     placeholder="Your name"
                                 />
                             </label>
                             <label className="space-y-2">
-                                <span className="text-[11px] font-medium tracking-[0.14em] text-[#6e6e73] uppercase">Email</span>
+                                <span className="text-base font-medium tracking-[0.14em] text-[#6e6e73] uppercase">Email</span>
                                 <input
                                     type="email"
-                                    className="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/[0.06] text-white font-body text-[13px] placeholder:text-[#6e6e73]/50 focus:border-white/[0.15] focus:outline-none focus:ring-1 focus:ring-white/[0.08] transition-all"
+                                    className="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/[0.06] text-white font-body text-base placeholder:text-[#6e6e73]/50 focus:border-white/[0.15] focus:outline-none focus:ring-1 focus:ring-white/[0.08] transition-all"
                                     placeholder="you@email.com"
                                 />
                             </label>
                         </div>
 
                         <label className="block space-y-2">
-                            <span className="text-[11px] font-medium tracking-[0.14em] text-[#6e6e73] uppercase">Project Type</span>
+                            <span className="text-base font-medium tracking-[0.14em] text-[#6e6e73] uppercase">Project Type</span>
                             <input
-                                className="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/[0.06] text-white font-body text-[13px] placeholder:text-[#6e6e73]/50 focus:border-white/[0.15] focus:outline-none focus:ring-1 focus:ring-white/[0.08] transition-all"
+                                className="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/[0.06] text-white font-body text-base placeholder:text-[#6e6e73]/50 focus:border-white/[0.15] focus:outline-none focus:ring-1 focus:ring-white/[0.08] transition-all"
                                 placeholder="Fullstack app, API, portfolio, DevOps setup..."
                             />
                         </label>
 
                         <label className="block space-y-2">
-                            <span className="text-[11px] font-medium tracking-[0.14em] text-[#6e6e73] uppercase">Message</span>
+                            <span className="text-base font-medium tracking-[0.14em] text-[#6e6e73] uppercase">Message</span>
                             <textarea
                                 rows={6}
-                                className="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/[0.06] text-white font-body text-[13px] placeholder:text-[#6e6e73]/50 focus:border-white/[0.15] focus:outline-none focus:ring-1 focus:ring-white/[0.08] transition-all resize-none"
+                                className="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/[0.06] text-white font-body text-base placeholder:text-[#6e6e73]/50 focus:border-white/[0.15] focus:outline-none focus:ring-1 focus:ring-white/[0.08] transition-all resize-none"
                                 placeholder="Tell me what you want to build..."
                             />
                         </label>
@@ -125,14 +125,14 @@ export default function Contact() {
                         <div className="flex flex-col sm:flex-row sm:items-center gap-3">
                             <button
                                 type="submit"
-                                className="flex items-center justify-center gap-2 rounded-xl bg-white px-5 py-3 text-[13px] font-medium text-black hover:bg-white/90 transition-colors group"
+                                className="flex items-center justify-center gap-2 rounded-xl bg-white px-5 py-3 text-base font-medium text-black hover:bg-white/90 transition-colors group"
                             >
                                 Send Message
                                 <Send className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
                             </button>
                             <div className="flex items-center gap-2 text-[#6e6e73]">
                                 <Calendar className="w-3.5 h-3.5 text-[#00f0ff]" />
-                                <span className="text-[11px] font-medium tracking-wider uppercase">Usually replies within 24 hours</span>
+                                <span className="text-base font-medium tracking-wider uppercase">Usually replies within 24 hours</span>
                             </div>
                         </div>
                     </form>

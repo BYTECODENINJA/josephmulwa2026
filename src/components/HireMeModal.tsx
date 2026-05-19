@@ -76,7 +76,7 @@ export default function HireMeModal() {
                                 <h2 className="font-display text-lg font-semibold text-white tracking-tight">
                                     Hire Me
                                 </h2>
-                                <p className="font-body text-[13px] text-[#6e6e73] mt-0.5">
+                                <p className="font-body text-base text-[#6e6e73] mt-0.5">
                                     Let&apos;s build something extraordinary together.
                                 </p>
                             </div>
@@ -93,7 +93,7 @@ export default function HireMeModal() {
                             <div className="flex p-1 rounded-xl bg-white/[0.03] border border-white/[0.04]">
                                 <button
                                     onClick={() => setMode("employment")}
-                                    className={`flex-1 py-2.5 px-4 text-[13px] font-medium tracking-tight rounded-lg transition-all duration-300 ${
+                                    className={`flex-1 py-2.5 px-4 text-base font-medium tracking-tight rounded-lg transition-all duration-300 ${
                                         mode === "employment"
                                             ? "bg-white/[0.08] text-white"
                                             : "text-[#86868b] hover:text-white"
@@ -103,7 +103,7 @@ export default function HireMeModal() {
                                 </button>
                                 <button
                                     onClick={() => setMode("project")}
-                                    className={`flex-1 py-2.5 px-4 text-[13px] font-medium tracking-tight rounded-lg transition-all duration-300 ${
+                                    className={`flex-1 py-2.5 px-4 text-base font-medium tracking-tight rounded-lg transition-all duration-300 ${
                                         mode === "project"
                                             ? "bg-white/[0.08] text-white"
                                             : "text-[#86868b] hover:text-white"
@@ -136,7 +136,7 @@ function InputGroup({
 }) {
     return (
         <div className="space-y-2">
-            <label className="flex items-center gap-2 text-[11px] font-medium tracking-[0.1em] text-[#6e6e73] uppercase">
+            <label className="flex items-center gap-2 text-base font-medium tracking-[0.1em] text-[#6e6e73] uppercase">
                 <Icon className="w-3 h-3" />
                 {label}
             </label>
@@ -149,7 +149,7 @@ function StyledInput(props: React.InputHTMLAttributes<HTMLInputElement>) {
     return (
         <input
             {...props}
-            className="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/[0.06] text-white font-body text-[13px] placeholder:text-[#6e6e73]/50 focus:border-white/[0.15] focus:outline-none focus:ring-1 focus:ring-white/[0.08] transition-all"
+            className="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/[0.06] text-white font-body text-base placeholder:text-[#6e6e73]/50 focus:border-white/[0.15] focus:outline-none focus:ring-1 focus:ring-white/[0.08] transition-all"
         />
     );
 }
@@ -159,7 +159,7 @@ function StyledSelect(props: React.SelectHTMLAttributes<HTMLSelectElement> & { o
     return (
         <select
             {...rest}
-            className="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/[0.06] text-white font-body text-[13px] focus:border-white/[0.15] focus:outline-none focus:ring-1 focus:ring-white/[0.08] transition-all appearance-none"
+            className="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/[0.06] text-white font-body text-base focus:border-white/[0.15] focus:outline-none focus:ring-1 focus:ring-white/[0.08] transition-all appearance-none"
         >
             <option value="" className="bg-[#111111]">Select...</option>
             {options.map((opt) => (
@@ -175,7 +175,7 @@ function StyledTextArea(props: React.TextareaHTMLAttributes<HTMLTextAreaElement>
     return (
         <textarea
             {...props}
-            className="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/[0.06] text-white font-body text-[13px] placeholder:text-[#6e6e73]/50 focus:border-white/[0.15] focus:outline-none focus:ring-1 focus:ring-white/[0.08] transition-all resize-none"
+            className="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/[0.06] text-white font-body text-base placeholder:text-[#6e6e73]/50 focus:border-white/[0.15] focus:outline-none focus:ring-1 focus:ring-white/[0.08] transition-all resize-none"
         />
     );
 }
@@ -220,7 +220,7 @@ function EmploymentForm() {
 
             <button
                 type="submit"
-                className="w-full py-3.5 bg-white text-black font-medium text-[13px] rounded-xl hover:bg-white/90 transition-colors flex items-center justify-center gap-2 group"
+                className="w-full py-3.5 bg-white text-black font-medium text-base rounded-xl hover:bg-white/90 transition-colors flex items-center justify-center gap-2 group"
             >
                 Submit Application
                 <ChevronRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
@@ -273,7 +273,7 @@ function ProjectForm() {
 
             <button
                 type="submit"
-                className="w-full py-3.5 bg-white text-black font-medium text-[13px] rounded-xl hover:bg-white/90 transition-colors flex items-center justify-center gap-2 group"
+                className="w-full py-3.5 bg-white text-black font-medium text-base rounded-xl hover:bg-white/90 transition-colors flex items-center justify-center gap-2 group"
             >
                 Send Project Request
                 <Send className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />

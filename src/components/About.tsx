@@ -46,7 +46,7 @@ export default function About() {
         >
             <div className="relative z-10 max-w-7xl mx-auto w-full">
                 <div className="about-reveal mb-6">
-          <span className="text-[11px] font-medium tracking-[0.2em] text-[#ff0033] uppercase">
+          <span className="text-base font-medium tracking-[0.2em] text-[#ff0033] uppercase">
             About
           </span>
                 </div>
@@ -57,13 +57,13 @@ export default function About() {
 
                 <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-16 xl:gap-24 items-start">
                     <div className="space-y-6">
-                        <p className="about-reveal font-body text-[17px] text-[#86868b] leading-relaxed">
+                        <p className="about-reveal font-body text-xl text-[#86868b] leading-relaxed">
                             I&apos;m{" "}
                             <span className="text-white font-medium">Joseph Mulwa</span> — a
                             creative fullstack engineer passionate about building digital
                             experiences that merge clean code with reliable infrastructure.
                         </p>
-                        <p className="about-reveal font-body text-[15px] text-[#6e6e73] leading-relaxed">
+                        <p className="about-reveal font-body text-lg text-[#6e6e73] leading-relaxed">
                             My academic foundation in Computer Science from{" "}
                             <span className="text-[#86868b]">
                 The Co-operative University of Kenya
@@ -71,7 +71,7 @@ export default function About() {
                             equips me with theoretical depth, while hands-on experience in
                             modern web technologies keeps me grounded in practical execution.
                         </p>
-                        <p className="about-reveal font-body text-[15px] text-[#6e6e73] leading-relaxed">
+                        <p className="about-reveal font-body text-lg text-[#6e6e73] leading-relaxed">
                             From architecting robust API layers to orchestrating Docker
                             containers and CI/CD pipelines. Every challenge is approached
                             with precision and creative flair.
@@ -86,10 +86,10 @@ export default function About() {
                                 style={{ transitionDelay: `${index * 50}ms` }}
                             >
                                 <stat.icon className="w-5 h-5 text-[#ff0033] mb-4 opacity-80 group-hover:opacity-100 transition-opacity" />
-                                <div className="text-[10px] font-medium tracking-[0.15em] text-[#6e6e73] uppercase mb-1.5">
+                                <div className="text-base font-medium tracking-[0.15em] text-[#6e6e73] uppercase mb-1.5">
                                     {stat.label}
                                 </div>
-                                <div className="text-sm font-medium text-white tracking-tight">
+                                <div className="text-base font-medium text-white tracking-tight">
                                     {stat.value}
                                 </div>
                             </div>
