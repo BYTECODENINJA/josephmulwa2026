@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import { ArrowDown, ChevronRight, FileText, Download } from "lucide-react";
 import gsap from "gsap";
-import resumeUrl from "../assets/JosephMulwa.pdf";
+import resumeUrl from "../assets/JOSEPH MULWA -.pdf";
 
 export default function Hero() {
     const sectionRef = useRef<HTMLElement>(null);
